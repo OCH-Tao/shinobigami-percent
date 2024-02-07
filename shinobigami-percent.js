@@ -19,7 +19,7 @@ button.onclick = () => {
       cnt++;
     }
   }
-  result.innerText = `通常時${(cnt / l.length) * 100}%`;
+  result.innerText = `通常時:${(cnt / l.length) * 100}%`;
 }
 daigongen.onclick = () => {
   result.innerText = "";
