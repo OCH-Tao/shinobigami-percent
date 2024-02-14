@@ -10,6 +10,9 @@ const decide = () => {
   let p = parseInt(plusminus.value, 10);
   let s = parseInt(special.value, 10);
   let f = parseInt(fumble.value, 10);
+  if (s <= f) {
+    s = f + 1;
+  }
   const dice = { "t": t, "p": p, "s": s, "f": f };
   return dice;
 }
