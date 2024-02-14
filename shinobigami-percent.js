@@ -40,7 +40,7 @@ button.onclick = () => {
       l.push(i + j);
     }
   }
-  const cnt = percent(dice, l);
+  percent(dice, l);
 }
 daigongen.onclick = () => {
   result.innerText = "";
@@ -53,5 +53,5 @@ daigongen.onclick = () => {
       }
     }
   }
-  const cnt = percent(dice, l);
+  percent(dice, l);
 }
