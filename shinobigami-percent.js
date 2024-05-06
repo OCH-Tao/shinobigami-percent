@@ -19,7 +19,7 @@ const decide = () => {
 const percent = (dice, l) => {
   let cnt = { "success": 0, "special": 0, "fumble": 0 };
   for (let i = 0; i < l.length; i++) {
-    if (l[i] + dice.p >= dice.t) {
+    if (l[i] + dice.p >= dice.t && l[i] > dice.f) {
       cnt.success++;
     }
     if (l[i] >= dice.s) {
