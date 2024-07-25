@@ -15,7 +15,7 @@ const decide = () => {
   }
   const dice = { "t": t, "p": p, "s": s, "f": f };
   return dice;
-}
+};
 const percent = (dice, l) => {
   let cnt = { "success": 0, "special": 0, "fumble": 0 };
   for (let i = 0; i < l.length; i++) {
@@ -29,10 +29,10 @@ const percent = (dice, l) => {
       cnt.fumble++;
     }
   }
-  result.innerText = `通常時\n成功率:${(cnt.success / l.length) * 100}%\nスペシャル率:${(cnt.special / l.length) * 100}%\nファンブル率:${(cnt.fumble / l.length) * 100}%`;
-}
+  result.innerText += `成功率:${((cnt.success / l.length) * 100).toFixed(5)}%\nスペシャル率:${((cnt.special / l.length) * 100).toFixed(5)}%\nファンブル率:${((cnt.fumble / l.length) * 100).toFixed(5)}%`;
+};
 button.onclick = () => {
-  result.innerText = "";
+  result.innerText = "通常時\n";
   const dice = decide();
   let l = [];
   for (let i = 1; i <= 6; i++) {
@@ -41,9 +41,9 @@ button.onclick = () => {
     }
   }
   percent(dice, l);
-}
+};
 daigongen.onclick = () => {
-  result.innerText = "";
+  result.innerText = "大権現時\n";
   const dice = decide();
   let l = [];
   for (let i = 1; i <= 6; i++) {
@@ -54,4 +54,4 @@ daigongen.onclick = () => {
     }
   }
   percent(dice, l);
-}
+};
